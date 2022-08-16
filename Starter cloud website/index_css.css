@@ -56,25 +56,7 @@
     clear: both;
     position: relative;
   }
-  
-  /* .left {
-    height: 1000px;
-    width: 45px;
-    float: left;
-    position: fixed;
-  }
-  
-  .right {
-    height: 1000px;
-    width: 45px;
-    float: right;
-    position: inherit;
-  } 
-  
-  .info {
-    text-align: center;
-  }
-  */
+
   p{
     font-family:'Trebuchet MS';
     text-indent: 2%;
@@ -131,7 +113,6 @@
   
   a {
     color: black;
-    text-decoration: none;
   }
   
   @media only screen and (max-width: 430px) {
