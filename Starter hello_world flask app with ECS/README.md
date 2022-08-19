@@ -1,0 +1,3 @@
+This was copied from the files of a github found in: https://github.com/arska/flask-helloworld
+I was trying to better understand the process of a simple hello world python script with docker files and using ECS.
+My current issue was that there were packages that I was using that AWS did not have natively installed, and this showed me how to set up the requirements.txt to assist AWS in know what versions to specifically install in order for it all to work.
