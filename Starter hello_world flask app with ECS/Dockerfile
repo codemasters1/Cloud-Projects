@@ -19,8 +19,8 @@ COPY app.py .
 # drop root privileges when running the application
 USER 1001
 
-# run this command at run-time
-CMD [ "python", "app.py" ]
-
 # expose this TCP-port
 EXPOSE 8080
+
+# run this command at run-time
+CMD [ "python", "app.py" ]
