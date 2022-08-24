@@ -6,7 +6,8 @@
 
 body {
   margin: 0;
-  background-color: #0288d1;
+  /* background-color: #DE5801; */
+  background-color: #ADE2E5;
 }
 
 a {
@@ -22,7 +23,9 @@ p {
 
 #CONTAINER_PARENT_0{
   text-align: left;
-  background: lightcoral;
+  /* background: #0187de; */
+  background-color: #E5B0AD;
+  /* background-color: #0187DE; */
   display: inline-block;
   width: 209px;
   padding: 30px;
