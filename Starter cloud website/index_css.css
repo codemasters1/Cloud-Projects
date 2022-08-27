@@ -2,52 +2,281 @@
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS';
+  box-sizing: border-box;
+  color: black;
 }
 
 body {
   margin: 0;
-  /* background-color: #DE5801; */
-  background-color: #ADE2E5;
+  min-height: 100vh;
+  background: #ADE2E5;
+}
+
+#CONTAINER_PARENT_0 {
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  --is-css-loaded: 1;
+  --is-skins-css-loaded: 1;
+  text-align: left;
+  font-feature-settings: "liga" 0;
+  cursor: default;
+  user-select: none;
+  color: #343b30;
+  font-variant-ligatures: none;
+  word-wrap: break-word;
+  line-height: 21px;
+  font-size: 16px;
+  font-family: Trebuchet MS;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  transition: none !important;
+  table-layout: fixed;
+  align-content: stretch !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
+
+#CONTAINER_0 {
+  font-weight: bold;
+
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: content-box;
+  padding: 30px;
+  position: relative;
+  width: 18%;
+  display: inline-block;
+  overflow: inherit;
+  background: #0187de;
+  opacity: .6;
+}
+
+
+#CONTAINER_1 {
+  /* background-color: #0187DE; */
+  /* width: 82%; */
+  width: 100%;
+  /* opacity: .1; */
+}
+
+.doc-item {
+  /* padding: 5pc 20pc pc 5pc; */
+  padding: 5pc;
+  display: table-cell;
+  vertical-align: center;
+}
+
+.sectiontitle {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  --is-css-loaded: 1;
+  --is-skins-css-loaded: 1;
+  text-align: left;
+  font-feature-settings: "liga" 0;
+  user-select: none;
+  color: #343b30;
+  font-variant-ligatures: none;
+  word-wrap: break-word;
+  font-family: Trebuchet MS;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 22px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  transition: none !important;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+
+.paragraph_sum p {
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  --is-css-loaded: 1;
+  --is-skins-css-loaded: 1;
+  text-align: left;
+  font-feature-settings: "liga" 0;
+  user-select: none;
+  color: #343b30;
+  font-variant-ligatures: none;
+  word-wrap: break-word;
+  line-height: 21px;
+  font-size: 16px;
+  /* padding: 30px; */
+  font-family: Trebuchet MS;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;  
+  transition: none !important;
+  margin-top: 0;
+} 
+
+/* #CONTAINER_PARENT_1 {
+  text-align: left;
+  display: inline-block;
+  display: table;
+  background: white;
+  box-sizing: content-box;
+  word-wrap: break-word;
+  padding: 30px 20px 30px; 
+  width: 100%;
+  border-radius: 25px;
+  margin: 5pc 50pc 0;
+} */
+
+#CONTAINER_PARENT_1 {
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  --is-css-loaded: 1;
+  --is-skins-css-loaded: 1;
+  text-align: left;
+  font-feature-settings: "liga" 0;
+  cursor: default;
+  user-select: none;
+  color: #343b30;
+  font-variant-ligatures: none;
+  word-wrap: break-word;
+  line-height: 21px;
+  font-size: 16px;
+  font-family: Trebuchet MS;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  transition: none !important;
+  flex-grow: 1;
+  table-layout: fixed;
+  align-content: stretch !important;
+  display: flex !important;
+  flex-wrap: inherit !important;
+  /* max-height: 100%; */
+  /* height: 100%; */
+}
+
+#CONTAINER_2 {
+  background-color: lightblue;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: content-box;
+  padding: 30px;
+  position: relative;
+  /* width: 250px; */
+  width: 18%;
+  /* width: 100%; */
+  display: inline-block;
+  overflow: inherit;
+  /* background: lightblue; */
+  height: 100vh; /*doing this will let the container take the rest of the bottom of the page*/
+}
+
+#CERTIFICATES {
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  --is-css-loaded: 1;
+  --is-skins-css-loaded: 1;
+  text-align: left;
+  font-feature-settings: "liga" 0;
+  user-select: none;
+  color: #343b30;
+  font-variant-ligatures: none;
+  word-wrap: break-word;
+  line-height: 21px;
+  font-size: 16px;
+  font-family: Trebuchet MS;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  transition: none !important;
+  z-index: 10;
+  position: relative;
+  cursor: pointer;
+}
+
+#CONTAINER_3 {
+  background-color: white;
+  /* width: 82%; */
+  width: 100%;
 }
 
 a {
-  color: black;
   text-decoration: none;
+  /* margin: 10px; */
+  /* padding: 0px; */
 }
 
 p {
   text-indent: 4%;
   font-size: 20px;
+  margin: 1%;
   font-family: 'Georgia';
 }
 
-#CONTAINER_PARENT_0{
-  text-align: left;
-  /* background: #0187de; */
-  background-color: #E5B0AD;
-  /* background-color: #0187DE; */
-  display: inline-block;
-  width: 209px;
-  padding: 30px;
-  box-sizing: content-box;
-  left: 50px;
-  font-family: 'Times New Roman';
+h2 {
+  margin: 2%;
 }
 
-#CONTAINER_PARENT_1 {
-  text-align: left;
-  display: inline-block;
-  background-color: white;
-  box-sizing: content-box;
-  word-wrap: break-word;
-  padding: 30px 20px 30px; /*top, left and right, bottom*/
-  border-radius: 25px;
-  margin: 5pc 50pc 0;
+h3 {
+  text-indent: 2%;
+}
+
+.Job_desc{
+  font-weight: bold;
+}
+
+.certs {
+  padding: 10%;
+  /* font-weight: bold; */
+}
+
+li {
+  font-size: 20px;
 }
 
 @media (max-width: 1440px){
-  #CONTAINER_PARENT_1 {
-      margin: 5pc 5pc 0;
+  #CONTAINER_0 {
+    width: 25%;;
+  }
+  #CONTAINER_1 {
+    width: 75%;
+  }
+  #CONTAINER_2 {
+    width: 25%;
+  }
+  #CONTAINER_3 {
+    width: 75%;
   }
 }
 
