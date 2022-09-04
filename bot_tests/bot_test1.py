@@ -23,4 +23,4 @@ client.add_listener("comment", on_comment)
 if __name__ == '__main__':
     # Run the client and block the main thread
     # await client.start() to run non-blocking
-    client.run()
+    client.run() 
