@@ -1,0 +1,1 @@
+Testing Fargate running task correctly running to a S3 bucket!

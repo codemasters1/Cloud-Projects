@@ -4,7 +4,7 @@ from TikTokLive import TikTokLiveClient
 from TikTokLive.types.events import CommentEvent, ConnectEvent, LikeEvent, FollowEvent, Gift, GiftEvent, ViewerCountUpdateEvent
 # from dotenv import load_dotenv, find_dotenv
 
-client: TikTokLiveClient = TikTokLiveClient(unique_id='charliesuit01')
+client: TikTokLiveClient = TikTokLiveClient(unique_id='tv_asahi_news')
 
 
 @client.on("connect")
