@@ -41,6 +41,7 @@ def pages(page_url, page_number):
 def get_top_gainers2(url, top_gainers):
   p_count = page_amounts(url)
   top_gainers = pages(url, p_count)
+  print(top_gainers)
   return top_gainers
 
 def main():
