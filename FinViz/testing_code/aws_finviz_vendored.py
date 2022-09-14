@@ -1,9 +1,9 @@
-# from FinViz.finviz_webscraper import get_top_gainers2
 from tokenize import String
-# import boto3
+import boto3
 from bs4 import BeautifulSoup as soup
 from urllib.request import Request, urlopen
-import requests
+# import requests
+from botocore.vendored import requests
 from requests import get
 import pandas as pd
 import numpy as np
@@ -11,6 +11,8 @@ from time import sleep
 import datetime
 from datetime import date
 import pytz
+
+from io import StringIO
 
 def page_amounts(url):
   req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -41,21 +43,25 @@ def pages(page_url, page_number):
 def get_top_gainers2(url, top_gainers):
   p_count = page_amounts(url)
   top_gainers = pages(url, p_count)
-  print(top_gainers)
   return top_gainers
 
 def main():
-#######################################    
+  #######################################   
+  DATA_BUCKET = "finviz-daily-topgainers"
+  s3 = boto3.resource("s3")
+  #######################################    
   utc_now = pytz.utc.localize(datetime.datetime.utcnow())
   today = utc_now.astimezone(pytz.timezone("America/Chicago"))
   new_today = today.strftime("%m-%d-%Y")
   filename = 'top_gainers_' + new_today + '.csv'
-#######################################
   top_gainers = []
-#######################################
+  #######################################
   df = pd.DataFrame( get_top_gainers2("https://finviz.com/screener.ashx?v=110&s=ta_topgainers", top_gainers) )
-  # df.to_csv("/Users/thomascovarrubias/Desktop/Cloud-Projects/FinViz/FinViz_data/"+filename)
-#######################################
+  filename_buffer = StringIO()
+  df.to_csv(filename_buffer)
+  #######################################
+  s3.Object(DATA_BUCKET, filename).put( Body=filename_buffer.getvalue())
+  #######################################   
 
 
 if __name__ == "__main__":
