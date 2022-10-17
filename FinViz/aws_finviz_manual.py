@@ -1,6 +1,6 @@
 # from FinViz.finviz_webscraper import get_top_gainers2
 from tokenize import String
-import boto3
+# import boto3
 from bs4 import BeautifulSoup as soup
 from urllib.request import Request, urlopen
 import requests
@@ -41,6 +41,7 @@ def pages(page_url, page_number):
 def get_top_gainers2(url, top_gainers):
   p_count = page_amounts(url)
   top_gainers = pages(url, p_count)
+  # print(top_gainers)
   return top_gainers
 
 def main():

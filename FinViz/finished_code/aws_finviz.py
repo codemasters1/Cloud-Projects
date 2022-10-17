@@ -1,10 +1,7 @@
-# from FinViz.finviz_webscraper import get_top_gainers2
 from tokenize import String
 import boto3
 from bs4 import BeautifulSoup as soup
 from urllib.request import Request, urlopen
-import requests
-from requests import get
 import pandas as pd
 import numpy as np
 from time import sleep
@@ -16,6 +13,7 @@ from io import StringIO
 
 def page_amounts(url):
   req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+  print('made it past big Request')
   webpage = urlopen(req).read()
   html = soup(webpage, "html.parser")
   page_count = html.find_all(attrs = {'class': 'screener-pages'})
@@ -41,6 +39,7 @@ def pages(page_url, page_number):
   return top_gainers
 
 def get_top_gainers2(url, top_gainers):
+  print('inside the topgainers2 fn')
   p_count = page_amounts(url)
   top_gainers = pages(url, p_count)
   return top_gainers
@@ -54,6 +53,7 @@ def main():
   today = utc_now.astimezone(pytz.timezone("America/Chicago"))
   new_today = today.strftime("%m-%d-%Y")
   filename = 'top_gainers_' + new_today + '.csv'
+  print('filename: ' + filename)
   top_gainers = []
   #######################################
   df = pd.DataFrame( get_top_gainers2("https://finviz.com/screener.ashx?v=110&s=ta_topgainers", top_gainers) )
