@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="sot-button-css.css"> -->
+        <link rel="stylesheet" href="./css/sot-button-css.css"
+    </head>
+    <body>
+        <!-- put the title tage in the body and not in the head when storing css file in another folder separate from html -->
+        <title>https://fkd.sale</title> 
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="sot_logo.png" alt="sot=logo" class="center">
+                </div>
+            </div>
+            <div class="row">
+                <button id="theButton" onclick="doRedirect()">
+                    <!-- not quite sure what the ion-icon tag code is for, keeping here in case we want it or not later on -Tom 100622- -->
+                    <ion-icon name="open" role="img" class="hydrated" aria-label="open">
+                        <style>
+                            :host{display:inline-block;width:1em;height:1em;contain:strict;-webkit-box-sizing:content-box!important;box-sizing:content-box!important}.icon-inner,svg{display:block;fill:currentColor;stroke:currentColor;height:100%;width:100%}:host(.flip-rtl) .icon-inner{-webkit-transform:scaleX(-1);transform:scaleX(-1)}:host(.icon-small){font-size:18px!important}:host(.icon-large){font-size:32px!important}:host(.ion-color){color:var(--ion-color-base)!important}:host(.ion-color-primary){--ion-color-base:var(--ion-color-primary,#3880ff)}:host(.ion-color-secondary){--ion-color-base:var(--ion-color-secondary,#0cd1e8)}:host(.ion-color-tertiary){--ion-color-base:var(--ion-color-tertiary,#f4a942)}:host(.ion-color-success){--ion-color-base:var(--ion-color-success,#10dc60)}:host(.ion-color-warning){--ion-color-base:var(--ion-color-warning,#ffce00)}:host(.ion-color-danger){--ion-color-base:var(--ion-color-danger,#f14141)}:host(.ion-color-light){--ion-color-base:var(--ion-color-light,#f4f5f8)}:host(.ion-color-medium){--ion-color-base:var(--ion-color-medium,#989aa2)}:host(.ion-color-dark){--ion-color-base:var(--ion-color-dark,#222428)}
+                        </style>
+                        <div class="icon-inner">
+                        </div>
+                    </ion-icon>
+                    Proceed to Amazon
+                </button>
+                <script type="text/javascript">
+                    document.getElementById("theButton").onclick = function () {
+                        location.href = "https://ludoinvest.com/";
+                    };
+                </script>
+            </div>
+        </div>
+    </body>
+    <footer>
+
+    </footer>
+</html>
