@@ -5,34 +5,34 @@ body {
     margin: 0;
     /* padding: 0; */
     min-height: 100vh;
-    background: #ADE2E5;
-    /* border-spacing: 5px; */
+    /* background: #FFCCCB; */
+    background: #ff817f;
 }
 .header {
     height: 15vh;
     text-align: center;
-    /* border: solid;
-    border-width: 5px; */
-    display:flex;
+}
+.empty{
+    height: 19vh;
     background-color: #FFCCCB;
 }
-/* .header_center{
-    text-align: center;
-} */
-.empty{
-    height: 20vh;
-    background-color: lightgray;
-    /* display: flex; */
-}
 .info {
-    height: 65vh;
-    border: solid;
+    height: 66vh;
+    /* border: solid;
     border-color: red;
-    border-width: 3px;
+    border-width: 3px; */
     display: flex;
-    background-color: aliceblue;
+    background-color: lightgoldenrodyellow;
 }
 
+#center_box{
+    background-color: #2192FF;
+    position: absolute;
+    top: 2%;
+    left: 25%;
+    width: 50vw;
+    border-radius: 15px;
+}
 
 /* Split the screen in half */
 .split {
@@ -46,12 +46,12 @@ body {
     left: 0;
 }
   
-  /* Control the right side */
+/* Control the right side */
 .right {
     right: 0;
 }
   
-  /* If you want the content centered horizontally and vertically */
+/* If you want the content centered horizontally and vertically */
 .centered {
     position: absolute;
     top: 50%;
@@ -62,36 +62,54 @@ body {
 
 
 .data-portion1{
-    height: 50%;
+    height: 20%;
     border-style: dotted;
     border-color: black;
+    font-size: 1.5vh;
+    text-align: justify;
+    margin: 25px;
 }
 .data-portion2{
-    height: 49%;
+    height: 60%;
     font-size: 50%;
     border-style: dotted;
     border-color: darkblue;
+    font-size: 1vh;
+    margin: 25px;
+    text-align: justify;
 }
 .data-portion3{
     border-style: dotted;
-    border-color: yellow;
-    height: 20%;
+    border-color: black;
+    height: 15%;
+    font-size: 1vh;
+    text-align: justify;
+    margin: 25px;
 }
 .data-portion4{
     border-style: dotted;
     border-color: red;
-    height: 25%;
+    height: 10%;
+    font-size: 1vh;
+    text-align: justify;
+    margin: 25px;
 }
 .data-portion5{
     border-style: dotted;
     border-color: violet;
     height: 30%;
     font-size: 75%;
+    font-size: 1vh;
+    text-align: justify;
+    margin: 25px;
 } 
 .data-portion6{
     border-style: dotted;
-    border-color: white;
-    height: 24%;
+    border-color: darkblue;
+    height: 15%;
+    font-size: 1vh;
+    text-align: justify;
+    margin: 25px;
 }
 #sub-headers {
     color: red;
