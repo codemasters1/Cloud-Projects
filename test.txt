@@ -1,0 +1,108 @@
+{
+    'Arn': 'string',
+    'CreatedAt': datetime(2015, 1, 1),
+    'Details': {
+        'ExportAssetToSignedUrl': {
+            'AssetId': 'string',
+            'DataSetId': 'string',
+            'RevisionId': 'string',
+            'SignedUrl': 'string',
+            'SignedUrlExpiresAt': datetime(2015, 1, 1)
+        },
+        'ExportAssetsToS3': {
+            'AssetDestinations': [
+                {
+                    'AssetId': 'string',
+                    'Bucket': 'string',
+                    'Key': 'string'
+                },
+            ],
+            'DataSetId': 'string',
+            'Encryption': {
+                'KmsKeyArn': 'string',
+                'Type': 'aws:kms'|'AES256'
+            },
+            'RevisionId': 'string'
+        },
+        'ExportRevisionsToS3': {
+            'DataSetId': 'string',
+            'Encryption': {
+                'KmsKeyArn': 'string',
+                'Type': 'aws:kms'|'AES256'
+            },
+            'RevisionDestinations': [
+                {
+                    'Bucket': 'string',
+                    'KeyPattern': 'string',
+                    'RevisionId': 'string'
+                },
+            ],
+            'EventActionArn': 'string'
+        },
+        'ImportAssetFromSignedUrl': {
+            'AssetName': 'string',
+            'DataSetId': 'string',
+            'Md5Hash': 'string',
+            'RevisionId': 'string',
+            'SignedUrl': 'string',
+            'SignedUrlExpiresAt': datetime(2015, 1, 1)
+        },
+        'ImportAssetsFromS3': {
+            'AssetSources': [
+                {
+                    'Bucket': 'string',
+                    'Key': 'string'
+                },
+            ],
+            'DataSetId': 'string',
+            'RevisionId': 'string'
+        },
+        'ImportAssetsFromRedshiftDataShares': {
+            'AssetSources': [
+                {
+                    'DataShareArn': 'string'
+                },
+            ],
+            'DataSetId': 'string',
+            'RevisionId': 'string'
+        },
+        'ImportAssetFromApiGatewayApi': {
+            'ApiDescription': 'string',
+            'ApiId': 'string',
+            'ApiKey': 'string',
+            'ApiName': 'string',
+            'ApiSpecificationMd5Hash': 'string',
+            'ApiSpecificationUploadUrl': 'string',
+            'ApiSpecificationUploadUrlExpiresAt': datetime(2015, 1, 1),
+            'DataSetId': 'string',
+            'ProtocolType': 'REST',
+            'RevisionId': 'string',
+            'Stage': 'string'
+        }
+    },
+    'Errors': [
+        {
+            'Code': 'ACCESS_DENIED_EXCEPTION'|'INTERNAL_SERVER_EXCEPTION'|'MALWARE_DETECTED'|'RESOURCE_NOT_FOUND_EXCEPTION'|'SERVICE_QUOTA_EXCEEDED_EXCEPTION'|'VALIDATION_EXCEPTION'|'MALWARE_SCAN_ENCRYPTED_FILE',
+            'Details': {
+                'ImportAssetFromSignedUrlJobErrorDetails': {
+                    'AssetName': 'string'
+                },
+                'ImportAssetsFromS3JobErrorDetails': [
+                    {
+                        'Bucket': 'string',
+                        'Key': 'string'
+                    },
+                ]
+            },
+            'LimitName': 'Assets per revision'|'Asset size in GB'|'Amazon Redshift datashare assets per revision',
+            'LimitValue': 123.0,
+            'Message': 'string',
+            'ResourceId': 'string',
+            'ResourceType': 'REVISION'|'ASSET'|'DATA_SET'
+        },
+    ],
+    'Id': 'string',
+    'State': 'WAITING'|'IN_PROGRESS'|'ERROR'|'COMPLETED'|'CANCELLED'|'TIMED_OUT',
+    'Type': 'IMPORT_ASSETS_FROM_S3'|'IMPORT_ASSET_FROM_SIGNED_URL'|'EXPORT_ASSETS_TO_S3'|'EXPORT_ASSET_TO_SIGNED_URL'|'EXPORT_REVISIONS_TO_S3'|'IMPORT_ASSETS_FROM_REDSHIFT_DATA_SHARES'|'IMPORT_ASSET_FROM_API_GATEWAY_API',
+    'UpdatedAt': datetime(2015, 1, 1)
+}

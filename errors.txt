@@ -1,0 +1,7 @@
+Job_errors= [
+    {'Code': 'ACCESS_DENIED_EXCEPTION', 
+    'Message': 'User: arn:aws:sts::441581567129:assumed-role/AWSMarketplace-Dataset-Dynamic-Updater-role/AWSMarketplace-Dataset-Dynamic-Updater is not authorized to perform: 
+    dataexchange:CreateAsset on resource: 
+    arn:aws:dataexchange:us-east-1:441581567129:data-sets/cce3e903e8ff7a664d46e5cc38dbdd3a/revisions/8ce2dc6c50887edf8f5ce6d4db6b777f/assets'
+    }
+    ]

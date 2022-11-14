@@ -1,0 +1,57 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "S3PermissionforGettingDataSet",
+            "Effect": "Allow",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::dataexchangedev2/*"
+        },
+        {
+            "Sid": "S3DataExchangeServicePermissions",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": "arn:aws:s3:::*aws-data-exchange*"
+        },
+        {
+            "Sid": "DataExchangeAPIPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "dataexchange:CreateRevision",
+                "dataexchange:UpdateRevision",
+                "dataexchange:CreateJob",
+                "dataexchange:StartJob",
+                "dataexchange:GetJob"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "MarketplaceAPIPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "aws-marketplace:DescribeEntity",
+                "aws-marketplace:StartChangeSet",
+                "aws-marketplace:DescribeChangeSet"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "CreateCloudwatchLogGroup",
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:us-east-1:441581567129:*"
+        },
+        {
+            "Sid": "CloudwatchLogsPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:us-east-1:441581567129:log-group:*"
+        }
+    ]
+}
